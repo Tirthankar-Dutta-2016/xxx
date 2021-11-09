@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the jumbotron's default bottom margin */
+        .jumbotron {
+            margin-bottom: 0;
+        }
+
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #181D31;
+            text-align: center;
+            padding: 20px;
+        }
+
+        body {
+            background-color: #E6DDC4;
+        }
+    </style>
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron" style="background-color: #B2B1B9;">
+            <div class="container text-center">
+                <h1>Weather App</h1>
+                <p class="lead">A simple weather app created using Python Flask mircro-framework and the
+                    <em>openweathermap.org</em> API.
+                </p>
+            </div>
+        </div>
+        {% block header %}{% endblock header %}
+    </header>
+
+    <main style="padding: 20px; margin: auto;">
+        {% block main %}{% endblock main %}
+        <!-- #678983 -->
+    </main>
+
+    <footer class="container-fluid text-center">
+        <p class="lead" style="color: #F0E9D2;">&#169; Tirthankar Dutta 2021</p>
+    </footer>
+
+</body>
+
+</html>

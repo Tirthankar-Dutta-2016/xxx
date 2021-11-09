@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Result{% endblock title %}
+
+{% block header %}{% endblock header %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="panel" style="background-color: #17D7A0;">
+                <div class="panel-heading">Temperature (&#8451;)</div>
+                <div class="panel-footer">{{ content.temp }}</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="panel" style="background-color: #17D7A0;">
+                <div class="panel-heading">Feels Like (&#8451;)</div>
+                <div class="panel-footer">{{ content.feels_like }}</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="panel" style="background-color: #17D7A0;">
+                <div class="panel-heading">Minimum Temperature (&#8451;)</div>
+                <div class="panel-footer">{{ content.temp_min }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="panel" style="background-color: #17D7A0;">
+                <div class="panel-heading">Maximum Temperature (&#8451;) </div>
+                <div class="panel-footer">{{ content.temp_max }}</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="panel" style="background-color: #17D7A0;">
+                <div class="panel-heading">Humidity (%)</div>
+                <div class="panel-footer">{{ content.humidity }}</div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="panel" style="background-color: #17D7A0;">
+                <div class="panel-heading">Pressure (mB)</div>
+                <div class="panel-footer">{{ content.pressure }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}

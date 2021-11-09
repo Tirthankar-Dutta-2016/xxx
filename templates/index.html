@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block header %}
+<div class="container-fluid text-center" style="background-color: #E6DDC4; padding: 15px">
+    <p class=" lead">Enter City Name</p>
+    <form class="form-inline" method="POST" action="{{ url_for('index') }}">
+        <input type="text" class="form-control" size="40" placeholder="City Name" name="cityName"
+            style="margin: auto;" />
+        <button type="submit" class="btn btn-danger" formmethod="POST" style="margin: auto;">Submit</button>
+    </form>
+</div>
+{% endblock header %}
